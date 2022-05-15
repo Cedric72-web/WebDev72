@@ -1,0 +1,394 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f1f1f1;
+}
+
+/* ------------------------------------ NAVBAR ---------------------------------------- */
+
+.navbar{
+    left: -300px!important;
+    width: 250px;
+    height: 100vh;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-visible{
+    left: 0px!important;
+}
+
+.bloc-menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc-menu span{
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bloc-menu span a{
+    color: #fa8700;
+    text-decoration: none;
+}
+
+.bloc-menu span::after{
+    content: '';
+    display: block;
+    width: 0px;
+    margin: 5px auto 0 auto;
+    height: 2px;
+    border-radius: 2px;
+    background: #ff9419;
+    transition: all 0.2s ease-out;
+}
+
+.bloc-menu span:hover::after{
+    width: 100%;
+}
+
+.bloc-menu:nth-child(6){
+    display: none;
+}
+
+/* ------------------------------------ LOGO ---------------------------------------- */
+
+.bloc-menu:nth-child(1){
+    width: 100%;
+    height: 25%;
+    background: #333;
+
+}
+
+.logo{
+    margin: 20px 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 26px 26px 53px #292929,
+                -26px -26px 53px #3d3d3d;
+}
+
+.logo-img{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------ ICÔNE ENVELOPPE ---------------------------------------- */
+
+.logo-cercle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    cursor: pointer;
+}
+
+.logo-cercle img{
+    width: 70px;
+    position: absolute;
+    color: #fa8700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------ ICÔNE HAMBURGER ---------------------------------------- */
+
+.btn-rond-menu{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fa8700;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.cont-ligne{
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ligne-unique{
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background: #fa8700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ligne-unique::before{
+    content: '';
+    position: absolute;
+    background: #fa8700;
+    bottom: 10px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+}
+
+.ligne-unique::after{
+    content: '';
+    position: absolute;
+    background: #fa8700;
+    top: 10px;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+}
+
+.cont-ligne.active .ligne-unique::after{
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms ease, transform 300ms 300ms ease;
+}
+
+
+.cont-ligne.active .ligne-unique{
+    background: transparent;
+}
+
+.cont-ligne.active .ligne-unique::before{
+    top: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms ease, transform 300ms 300ms ease;
+}
+
+/* ---------------------------------------------- SECTION ACCUEIL ---------------------------------------------- */
+
+.accueil{
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: absolute;
+}
+
+h1{
+    color: #fa8700;
+    width: 100vw;
+    font-family: 'Inknut Antiqua', serif;
+    padding-top: 210px;
+    text-align: center;
+}
+
+h2{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #fa8700;
+    width: 100vw;
+    font-family: 'Inknut Antiqua', serif;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 0;
+}
+
+/* ------------------------------------ ICÔNE MEDIAS ---------------------------------------- */
+
+.medias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.media{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------ SECTION SKILLS ---------------------------------------- */
+
+.skills{
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px dashed #fa8700;
+    border-bottom: 1px dashed #fa8700;
+    top: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.fond-forme{
+    background: rgb(51, 51, 51);
+    background-image: linear-gradient(to right, #29323c to #485563);
+    width: 1000px;
+    height: 350px;
+    position: absolute;
+    z-index: -1;
+}
+
+.skills-list-item{
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.3rem;
+    list-style: none;
+    color: #fa8700;
+}
+
+/* ---------------------------------------------- RESPONSIVE DESIGN A PARTIR DE 800 PX---------------------------------------------- */
+
+@media screen and (min-width: 800px){
+
+    /* ----------------------------------------------SECTION NAVBAR ---------------------------------------------- */    
+    .navbar{
+        width: 250px;
+    }
+    
+    .bloc-menu span{
+        font-size: 1.3rem;
+    }
+    /* ---------------------------------------------- SECTION ACCUEIL ---------------------------------------------- */
+    .accueil{
+        height: 350px;
+    }
+
+    h1{
+        padding-top: 350px;
+        font-size: 2rem;
+    }
+    h2{
+        padding-top: 10px;
+        font-size: 1.6rem;
+    }
+
+    /* ------------------------------------ ICÔNE MEDIAS ---------------------------------------- */
+
+    .icone-medias{
+        width: 60%;
+    }
+
+    /* ------------------------------------ SECTION SKILLS ---------------------------------------- */
+
+    .skills{
+        top: 600px;
+    }
+    .fond-forme{
+        width: 100vw;
+        
+    }
+
+
+
+
+/* ---------------------------------------------- RESPONSIVE DESIGN A PARTIR DE 1000 PX---------------------------------------------- */
+
+@media screen and (min-width: 1000px){
+
+    /* ---------------------------------------------- SECTION NAVBAR ---------------------------------------------- */ 
+    .navbar{
+        width: 300px;
+        left: 0px!important;
+        min-height: 800px;
+    }
+
+    .btn-rond-menu{
+        display: none;
+    }
+    
+    .bloc-menu:nth-child(6){
+        display: flex;
+    }
+
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-img{
+        width: 80%;
+    }
+/* ---------------------------------------------- SECTION ACCUEIL ---------------------------------------------- */
+    .accueil{
+        margin-left: 150px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    /* ------------------------------------ ICÔNE MEDIAS ---------------------------------------- */
+
+    .medias{
+        margin-top: 20px;
+    }
+
+    .media{
+        width: 100px;
+        height: 100px;
+    }
+
+    .icone-medias{
+        width: 60%;
+}
+
+    /* ------------------------------------ SECTION SKILLS ---------------------------------------- */
+
+    .skills{
+        top: 700px;
+        width: 100vw;
+    }
+
+    .fond-forme{
+        left: 300px;
+    }
+
+}
+
