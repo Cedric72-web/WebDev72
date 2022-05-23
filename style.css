@@ -35,6 +35,11 @@ h3{
     text-transform: uppercase;
 }
 
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* ------------------------------------ NAVBAR ---------------------------------------- */
 
 .navbar{
@@ -153,7 +158,7 @@ h3{
     height: 50px;
     border: 2px solid #fa8700;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     z-index: 10;
@@ -226,6 +231,7 @@ h3{
     background-position: center;
     height: 200px;
     position: absolute;
+    top: 0;
 }
 
 
@@ -256,6 +262,7 @@ h3{
     border-top: 1px dashed #fa8700;
     border-bottom: 1px dashed #fa8700;
     top: 400px;
+    height: 480px;
     font-family: 'Titillium Web', sans-serif;
     justify-content: space-between;
     align-items: center;
@@ -290,6 +297,22 @@ h3{
     width: 100%;
     text-align: center;
     color: #fa8700;
+}
+
+.footer{
+    position: absolute;
+    top: 880px;
+    padding: 15px 0;
+    height: 50px;
+    width: 100%;
+}
+
+.footer p{
+    text-align: center;
+}
+
+.footer a{
+    color: black;
 }
 
 /* ---------------------------------------------- RESPONSIVE DESIGN A PARTIR DE 800 PX---------------------------------------------- */
