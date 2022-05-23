@@ -9,6 +9,32 @@ body{
     background: #f1f1f1;
 }
 
+h1{
+    color: #fa8700;
+    width: 100vw;
+    font-family: 'Inknut Antiqua', serif;
+    padding-top: 210px;
+    text-align: center;
+}
+
+h2{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #fa8700;
+    width: 100vw;
+    font-family: 'Inknut Antiqua', serif;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
 /* ------------------------------------ NAVBAR ---------------------------------------- */
 
 .navbar{
@@ -26,6 +52,7 @@ body{
     left: 0;
     z-index: 5;
     transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
 }
 
 .menu-visible{
@@ -201,30 +228,6 @@ body{
     position: absolute;
 }
 
-h1{
-    color: #fa8700;
-    width: 100vw;
-    font-family: 'Inknut Antiqua', serif;
-    padding-top: 210px;
-    text-align: center;
-}
-
-h2{
-    position: relative;
-    font-family: 'Titillium Web', sans-serif;
-    padding-top: 10px;
-    text-align: center;
-}
-
-h3{
-    font-size: 1.5rem;
-    color: #fa8700;
-    width: 100vw;
-    font-family: 'Inknut Antiqua', serif;
-    text-align: center;
-    text-decoration: underline;
-    padding: 10px 0;
-}
 
 /* ------------------------------------ ICÔNE MEDIAS ---------------------------------------- */
 
@@ -253,24 +256,34 @@ h3{
     border-top: 1px dashed #fa8700;
     border-bottom: 1px dashed #fa8700;
     top: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Titillium Web', sans-serif;
     justify-content: space-between;
     align-items: center;
 }
 
+.skill__items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .skill__item{
     display: block;
     justify-content: center;
+    align-items: center;
     width: 30%;
-    padding: 30px 15px;
+    padding: 20px 15px;
+    text-align: center;
 }
 
 .skill__item__img{
+    margin: 0 auto;
     justify-content: center;
-    width: 100%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .skill__item__text{
@@ -320,7 +333,7 @@ h3{
         width: 100vw;
         
     }
-
+}
 
 
 
