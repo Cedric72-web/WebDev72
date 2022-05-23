@@ -9,3 +9,5 @@ Il met en évidence, les technologies que j'apprends dans mes formations, et au 
 Vous pouvez à tous moments me contacter par le biais du site par mail ou via le formulaire de contact.
 
 A très bientôt!!
+
+/!\ Attention, le site n'est pas encore en ligne!!
